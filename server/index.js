@@ -16,7 +16,7 @@ const grabSumGrub = "/api/restaurants";
 // app.post( grabSumGrub, mc);
 
 // Get Request with Associated Endpoint
-// You need to create a mc.something. When finished delete comment.
+
 app.get( grabSumGrub, mc.getRestaurants);
 
 // ----- Note -----
