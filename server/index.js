@@ -8,16 +8,16 @@ const app = express();
 app.use( bodyParser.json() );
 app.use( cors() );
 
-// grabSumGrub is going to be my baseURL
-const grabSumGrub = "/api/restaurants";
+const port = 3002;
+
+
+// Get Request with Associated Endpoint
+
+app.get( '/api/grabsumgrub/restaurants', mc.getRestaurants);
 
 // Post Request with Associated Endpoint
 // You need to create a mc.something. When finished delete comment.
 // app.post( grabSumGrub, mc);
-
-// Get Request with Associated Endpoint
-
-app.get( grabSumGrub, mc.getRestaurants);
 
 // ----- Note -----
 // For the put and delete endpoints, we need to add on a url parameter of id.
@@ -35,7 +35,6 @@ app.get( grabSumGrub, mc.getRestaurants);
 // You need to create a mc.something. When finished delete comment.
 // app.delete( `${grabSumGrub}/:id`, mc);
 
-const port = 3002;
 
 app.listen(port, () => {console.log(`It's Magic!; ${port}`)
 });

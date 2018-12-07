@@ -1,5 +1,8 @@
 const axios = require('axios');
 
+// The information that I requested from the third party API is now stored
+// in the restaurantData array.
+
 let restaurantData = [];
 
 getRestaurants = ( req, res, next ) => {

@@ -8,9 +8,15 @@ class Restaurants extends Component {
         super()
 
         this.state = {
-
+            restaurants: [],
         };
     };
+
+    componentDidMount(){
+        axios.get('http://localhost:3002/api/grabsumgrub/restaurants').then( results => {
+            this.setState( { restaurants:results.data } )
+        });
+    }
 
     render(){
         return(
