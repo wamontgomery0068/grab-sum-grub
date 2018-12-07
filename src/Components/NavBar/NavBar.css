@@ -1,0 +1,12 @@
+.NavBar_Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    /* background-color: hsl(23, 22%, 37%); */
+    background-color: lightgreen;
+    border: 4px solid green;
+    height: 10vh;
+    width: auto;
+}

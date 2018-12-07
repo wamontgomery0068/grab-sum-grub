@@ -7,7 +7,8 @@ import './MainContent.css'
 
 export default function MainContent () {
     return(
-        <div className = "MainContent">
+        <div className = "MainContent_Container">
+        MainContent Component
 
             {/* <Restaurants /> */}
             {/* <BeenThere /> */}
