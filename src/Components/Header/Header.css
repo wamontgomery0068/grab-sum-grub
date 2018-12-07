@@ -4,8 +4,22 @@
     justify-content: center;
     align-items: center;
 
-    background-color: lightcoral;
-    border: 4px solid red;
-    height: 20vh;
+    background-color: lightgreen;
+    border: 4px solid green;
+    height: 15vh;
     width: auto;
+}
+
+.Title_Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: hsl(54, 100%, 77%);
+    border: 4px solid gold;
+    height: 10vh;
+    width: 30vw;
+
+
 }

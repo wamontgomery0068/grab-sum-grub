@@ -1,11 +1,41 @@
 .MainContent_Container {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    
+    /* background-image: url('https://images.unsplash.com/photo-1510148199876-8a856ee41d42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: hsl(261, 45%, 73%);
+    border: 4px solid purple;
+    height: 75vh;
+    width: auto;
+}
+
+.Restaurant_Container {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 
-    background-color: lightgreen;
-    border: 4px solid green;
+    background-color: hsl(54, 100%, 77%);
+    border: 4px solid gold;
+    border-radius: 12px;
+    height: 60vh;
+    width: 20vw;
+}
+
+.List_Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    /* background-image: url('https://i.etsystatic.com/6356034/r/il/3372a4/1077724581/il_570xN.1077724581_rvw5.jpg'); */
+    background-color: hsl(54, 100%, 77%);
+    border: 4px solid gold;
     height: 70vh;
-    width: auto;
+    width: 40vw;
 }
