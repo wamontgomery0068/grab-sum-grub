@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const mc = require('./mainController');
+const rc = require('./controller/restaurant_controller');
 
 const app = express();
 
@@ -13,7 +13,7 @@ const port = 3002;
 
 // Get Request with Associated Endpoint
 
-app.get( '/api/grabsumgrub/restaurants', mc.getRestaurants);
+app.get( '/api/grabsumgrub/restaurants', rc.getRestaurants);
 
 // Post Request with Associated Endpoint
 // You need to create a mc.something. When finished delete comment.
