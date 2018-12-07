@@ -20,9 +20,26 @@ class Restaurants extends Component {
 
     render(){
         return(
-            <div className = "Restaurants"></div>
+            <div className = "Restaurants">
+                <div className = "Restaurant_Container">
+                    <div className = "Restaurant_Card"></div>
+                    <div className = "Button_Card"></div>
+                </div>
+                <div className = "List_Container">
+                    <div className = "Restaurant_Container">
+                        <div className = "Restaurant_Card"></div>
+                        <div className = "Button_Card"></div>
+                    </div>
+                </div>
+            </div>
         )
     };
 };
 
 export default Restaurants;
+
+// ---- REMINDER ----
+
+// List Container
+// All of the divs inside the container are temporary.
+// Visual Reference.
