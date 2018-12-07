@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Title from './Title/Title';
 import './Header.css'
 
-export default function Header () {
-    return(
-        <div className = "Header_Container">
-            <div className = "Title_Container">
-                <p> Title </p>
+class Header extends Component{
+    render() {
+        const title = "Grab Sum Grub"
+        return (
+            <div className = "Header_Container">
+                <div className = "Title_Container">
+                    <Title title={title} />
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 };
+
+export default Header;

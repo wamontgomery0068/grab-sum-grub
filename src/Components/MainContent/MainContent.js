@@ -9,7 +9,7 @@ export default function MainContent () {
         <div className = "MainContent_Container">
 
             <div className = "Restaurant_Container">
-                <p> Restaurants </p>
+                <div className = "Restaurant_Card"></div>
             </div>
             <div className = "List_Container">
                 <p> List </p>
