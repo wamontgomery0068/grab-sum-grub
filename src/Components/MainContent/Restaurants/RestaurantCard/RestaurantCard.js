@@ -13,7 +13,13 @@ export default function RestaurantCard (props) {
                         <div className = "Image_Restaurant">
                             {props.image_url}
                         </div>
-                        <div className = "Details_Restaurant"></div>
+                        <div className = "Details_Restaurant">
+                            <p className = "Text_Details"> Address: {props.address} </p>
+                            <p className = "Text_Details"> City: {props.city} </p>
+                            <p className = "Text_Details"> State: {props.state} </p>
+                            <p className = "Text_Details"> Area Code: {props.postal_code} </p>
+                            <p className = "Text_Details"> Phone Number: {props.phone} </p>
+                        </div>
                     </div>
                     <div className = "Button_Card">
                         <div className = "BeenHere_Button">

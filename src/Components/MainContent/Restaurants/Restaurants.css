@@ -64,9 +64,10 @@
 .Details_Restaurant {
     /* background-color: lightgray; */
     /* border: 2px solid black; */
+    align-items: flex-start;
     height: 20vh;
     width: 10vw;
-    margin: 1%;
+    margin-right: 15%;
 }
 
 .Button_Card {
