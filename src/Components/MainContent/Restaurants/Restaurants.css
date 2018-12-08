@@ -151,7 +151,22 @@ input {
     /* border: 4px solid gold; */
     box-shadow: 5px 5px 5px 5px black;
     height: 70vh;
-    width: 40vw;
+    width: 30vw;
+}
+
+.RestaurantList_Container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3My5uuOWsGcQwa3mFHaTE4_Qx11C3zxv4TB0BndUfbwdPif-S');
+    /* background-color: hsl(54, 100%, 77%); */
+    /* border: 4px solid gold; */
+    box-shadow: 5px 5px 5px 5px black;
+    height: 70vh;
+    width: 50vw;
 }
 
 .User_Input {

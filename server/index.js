@@ -11,13 +11,14 @@ app.use( cors() );
 const port = 3002;
 
 
-// Get Request with Associated Endpoint
+// ***** Get Request with Associated Endpoint *****
 
-app.get( '/api/grabsumgrub/restaurants', rc.getRestaurants);
+app.get( '/api/grabsumgrub/restaurants', rc.getRestaurant);
 
-// Post Request with Associated Endpoint
-// You need to create a mc.something. When finished delete comment.
-// app.post( grabSumGrub, mc);
+// ***** Post Request with Associated Endpoint *****
+
+app.post( '/api/grabsumgrub/restaurants', rc.addRestaurant);
+// uncomment above
 
 // ----- Note -----
 // For the put and delete endpoints, we need to add on a url parameter of id.
@@ -26,14 +27,16 @@ app.get( '/api/grabsumgrub/restaurants', rc.getRestaurants);
 // ----- Note -----
 // Look at the difference between put,delete and post,get
 
-// Put Request with Associated Endpoint
-// You need to create a mc.something. When finished delete comment.
-// Reference: node-1-afternoon project
-// app.put( `${grabSumGrub}/:id`, mc);
+// ***** Delete Request with Associated Endpoint *****
 
-// Delete Request with Associated Endpoint
-// You need to create a mc.something. When finished delete comment.
-// app.delete( `${grabSumGrub}/:id`, mc);
+// app.delete( '/api/grabsumgrub/deleteRestaurant:id', rc)
+// uncomment above
+
+// ***** Put Request with Associated Endpoint *****
+
+// app.put( '/api/grabsumgrub/restaurants', rc)
+// uncomment above
+
 
 
 app.listen(port, () => {console.log(`It's Magic!; ${port}`)

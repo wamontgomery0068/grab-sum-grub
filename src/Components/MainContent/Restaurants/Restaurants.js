@@ -10,6 +10,7 @@ class Restaurants extends Component {
 
         this.state = {
             restaurants: [],
+            favorites: [],
         };
 
     };
