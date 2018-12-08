@@ -36,7 +36,18 @@ class Restaurants extends Component {
         let DisplayRestaurant = this.state.restaurants.map ( (element, index) => {
             return (
                 <div key = {index.id}>
-                    <div className = "Restaurant_Container"></div>
+                    <div className = "Restaurant_Container">
+                        <div className = "Restaurant_Card">
+                            <div className = "Name_Restaurant">
+                                <p> {element.name} </p>
+                            </div>
+                        </div>
+                        <div className = "Button_Card">
+                            <div className = "BeenHere_Button">
+                                <button className = "Add_Button" onClick ={()=> this.addFavorite(element)}> Add </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             )
         })
