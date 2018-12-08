@@ -41,6 +41,12 @@ class Restaurants extends Component {
                             <div className = "Name_Restaurant">
                                 <p> {element.name} </p>
                             </div>
+                            <img className = "Image_Restaurant" src={element.image_url} />
+                            <div className = "Details_Restaurant">
+                                <p className = "Text_Details"> {element.address} </p>
+                                <p className = "Text_Details"> {element.city} </p>
+                                <p className = "Text_Details"> {element.state} </p>
+                            </div>
                         </div>
                         <div className = "Button_Card">
                             <div className = "BeenHere_Button">
