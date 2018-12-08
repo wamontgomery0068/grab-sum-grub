@@ -11,15 +11,14 @@
     justify-content: space-around;
     align-items: center;
 
-    
     background-color:hsl(26, 28%, 32%); 
     /* background-color: hsl(54, 100%, 77%); */
     /* background-color: hsl(208, 6%, 60%); */
     /* border: 4px solid gold; */
     border: 2px solid white;
     border-radius: 12px;
-    height: 60vh;
-    width: 20vw;
+    height: 30vh;
+    width: 9vw;
 }
 
 .Restaurant_Card {
@@ -163,8 +162,10 @@ input {
 .RestaurantList_Container{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    align-content: center;
     margin-top: 1%;
 
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3My5uuOWsGcQwa3mFHaTE4_Qx11C3zxv4TB0BndUfbwdPif-S');

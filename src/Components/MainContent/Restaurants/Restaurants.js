@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import RestaurantCard from './RestaurantCard/RestaurantCard';
+// import RestaurantCard from './RestaurantCard/RestaurantCard';
 
 import './Restaurants.css';
 
@@ -36,25 +36,20 @@ class Restaurants extends Component {
         let DisplayRestaurant = this.state.restaurants.map ( (element, index) => {
             return (
                 <div key = {index.id}>
-                    
+                    <div className = "Restaurant_Container"></div>
                 </div>
             )
         })
 
-        // let DisplayFavorite = this
         return(
-            <div className = "Flannel">
-                <RestaurantCard />
-                {DisplayRestaurant}
+            <div className = "Restaurants">
+                <div className = "RestaurantList_Container">
+                    {DisplayRestaurant}
+                </div>
+                <div className = "List_Container"></div>
             </div>            
         )
     };
 };
 
 export default Restaurants;
-
-// ---- REMINDER ----
-
-// List Container
-// All of the divs inside the container are temporary.
-// Visual Reference.

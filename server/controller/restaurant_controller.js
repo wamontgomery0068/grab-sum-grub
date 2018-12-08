@@ -6,7 +6,7 @@ const axios = require('axios');
 let restaurantData = [];
 
 const getRestaurant = ( req, res, next ) => {
-    axios.get("http://opentable.herokuapp.com/api/restaurants?city=Nashville")
+    axios.get("http://opentable.herokuapp.com/api/restaurants?city=Nashville&per_page=10")
     .then( results => {
         restaurantData = results.data
         res.status(200).send(restaurantData)
