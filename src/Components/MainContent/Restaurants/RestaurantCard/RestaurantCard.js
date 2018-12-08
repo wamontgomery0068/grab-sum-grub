@@ -28,7 +28,7 @@ export default function RestaurantCard (props) {
                         <div className = "Name_Restaurant"></div>
                         <div className = "Image_Restaurant"></div>
                         <div className = "User_Section">
-                            <p> Restaurant Review </p>
+                            <p className = "Section_Text"> Restaurant Review </p>
                             <input type = "text" placeholder = "Add Comment"></input>
                             <button className = "Delete_Comment"> Delete </button>
                         </div>
