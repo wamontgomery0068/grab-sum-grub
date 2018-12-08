@@ -4,8 +4,10 @@
     justify-content: center;
     align-items: center;
 
-    background-color: hsl(54, 100%, 77%);
-    border: 4px solid gold;
+    background-image: url('http://jjthreads.com/blog/wp-content/uploads/2016/07/ojibwa-plaid.jpg');
+    /* background-color: hsl(54, 100%, 77%);
+    border: 4px solid gold; */
+    border-radius: 12px;
     height: 10vh;
     width: 30vw;
 }
@@ -13,4 +15,6 @@
 h1 {
     font-family: 'Bangers', cursive;
     font-size: 55px;
+    color: lightgrey;
+    letter-spacing: 2px;
 }

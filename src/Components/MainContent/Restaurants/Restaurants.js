@@ -10,39 +10,22 @@ class Restaurants extends Component {
 
         this.state = {
             restaurants: [],
-            counter: 0
         };
+
     };
 
     componentDidMount(){
         axios.get('http://localhost:3002/api/grabsumgrub/restaurants').then( results => {
-            this.setState( { restaurants:results.data } )
+        console.log(results)    
+        this.setState( { restaurants:results.data } )
         });
     }
-
-    handlePreviousClick () {
-
-        if (this.state.counter === 0) {
-            this.setState ( { counter:0 } )
-        }
-        else {
-            this.setState ( {counter: this.state.counter -1} )
-        };
-    };
-
-    handleNextClick () {
-
-        if (this.state.counter === this.state.restaurants) {
-            this.setState ( { counter:0 } )
-        }
-        else {
-            this.setState ( {counter: this.state.counter +1 } )
-        };
-    };
-
+    
     render(){
         return(
-            <RestaurantCard />
+            <div className = "Flannel">
+                <RestaurantCard />
+            </div>            
         )
     };
 };

@@ -11,6 +11,7 @@
     justify-content: space-around;
     align-items: center;
 
+    
     background-color:hsl(26, 28%, 32%); 
     /* background-color: hsl(54, 100%, 77%); */
     /* background-color: hsl(208, 6%, 60%); */
@@ -36,49 +37,42 @@
 }
 
 .Page_Count {
-    background-color: lightgray;
-    border: 2px solid black;
+    /* background-color: lightgray; */
+    /* border: 2px solid black; */
     border-radius: 12px;
     height: 3vh;
     width: 14.5vw;
     margin: 1%;
-
-    text-align: center;
 }
 
 .Name_Restaurant {
-    background-color: lightgray;
-    border: 2px solid black;
+    /* background-color: lightgray; */
+    /* border: 2px solid black; */
     height: 5vh;
     width: 10vw;
-
-    text-align: center;
+    margin: 1%;
 }
 
 
 .Image_Restaurant {
-    background-color: lightgray;
-    border: 2px solid black;
+    /* background-color: lightgray; */
+    /* border: 2px solid black; */
     height: 14vh;
     width: 10vw;
-
-    text-align: center;
 }
 
 .Details_Restaurant {
-    background-color: lightgray;
-    border: 2px solid black;
+    /* background-color: lightgray; */
+    /* border: 2px solid black; */
     height: 20vh;
     width: 10vw;
     margin: 1%;
-
-    text-align: center;
 }
 
 .Button_Card {
     display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
     align-items: center;
 
     background-color: hsl(40, 2%, 66%);
@@ -100,27 +94,49 @@
 
 p {
     font: white;
+    text-align: center;
 }
 
-button {
-    align-items: center;
-    background-color: hsl(26, 28%, 32%);
-    /* border: 4px solid yellowgreen; */
-    border: 2px solid white;
-    border-radius: 50%;
-    height: 3vh;
-    width: 1.5vw;
-    margin-left: 1%;
-    color: white;
-}
-
-.BeenHere_Button {
+.Add_Button {
     background-color: hsl(26, 28%, 32%);
     /* border: 4px solid yellowgreen; */
     border: 2px solid white;
     border-radius: 12px;
     height: 3vh;
     width: 6vw;
+    color: white;
+}
+
+input {
+    width: 70%;
+    text-align: center;
+}
+
+.Update_Button {
+    background-color: hsl(26, 28%, 32%);
+    /* border: 4px solid yellowgreen; */
+    border: 2px solid white;
+    border-radius: 12px;
+    height: 3vh;
+    width: 6vw;
+    color: white;
+    margin: 5%;
+}
+
+.Delete_Button {
+    background-color: hsl(26, 28%, 32%);
+    /* border: 4px solid yellowgreen; */
+    border: 2px solid white;
+    border-radius: 12px;
+    height: 3vh;
+    width: 6vw;
+    color: white;
+    margin: 5%;
+}
+
+.Delete_Comment {
+    width: 25%;
+    height: 10%;
 }
 
 .List_Container {
@@ -133,6 +149,15 @@ button {
     background-image: url('https://i.etsystatic.com/6356034/r/il/3372a4/1077724581/il_570xN.1077724581_rvw5.jpg');
     /* background-color: hsl(54, 100%, 77%); */
     /* border: 4px solid gold; */
+    box-shadow: 5px 5px 5px 5px black;
     height: 70vh;
     width: 40vw;
+}
+
+.User_Input {
+    background-color: lightgray;
+    border: 2px solid black;
+    height: 20vh;
+    width: 10vw;
+    margin: 1%;
 }

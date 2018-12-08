@@ -4,7 +4,7 @@ import './Header.css'
 
 class Header extends Component{
     render() {
-        const title = "Grab Sum Grub"
+        const title = "Grab Sum Grub...."
         return (
             <div className = "Header_Container">
                 <div className = "Title_Container">

@@ -9,12 +9,6 @@ export default function RestaurantCard (props) {
 
             <div className = "Restaurant_Card">
 
-                <div className = "Page_Count">
-
-                    {/* <p> {props.currentIndex +1 } of {props.totalIndex} </p> */}
-
-                </div>
-
                 <div className = "Name_Restaurant">
 
                     <p> {props.name} </p>
@@ -23,7 +17,7 @@ export default function RestaurantCard (props) {
 
                 <div className = "Image_Restaurant"> 
 
-                    <p> {props.image_url} </p>
+                    {props.image_url}
 
                 </div>
 
@@ -33,21 +27,9 @@ export default function RestaurantCard (props) {
 
             <div className = "Button_Card">
 
-                <div className = "Previous_Button">
-
-                    <button onClick = { props.handlePreviousClick }> - </button>
-
-                </div>
-
                 <div className = "BeenHere_Button">
 
-                    <p class = "Text_Button"> Been Here</p>
-
-                </div>
-
-                <div className = "Next_Button">
-
-                    <button onClick = { props.handleNextClick }> + </button>
+                    <button className = "Add_Button"> Add </button>
 
                 </div>
 
@@ -59,9 +41,20 @@ export default function RestaurantCard (props) {
 
             <div className = "Restaurant_Container">
 
-                <div className = "Restaurant_Card"></div>
+                <div className = "Restaurant_Card">
+                    <div className = "Name_Restaurant"></div>
+                    <div className = "Image_Restaurant"></div>
+                    <div className = "User_Section">
+                        <p> Restaurant Review </p>
+                        <input type = "text" placeholder = "Add Comment"></input>
+                        <button className = "Delete_Comment"> Delete </button>
+                    </div>
+                </div>
 
-                <div className = "Button_Card"></div>
+                <div className = "Button_Card">
+                    <button className = "Update_Button"> Update </button>
+                    <button className = "Delete_Button"> Delete </button>
+                </div>
 
             </div>
 
