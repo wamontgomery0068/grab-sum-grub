@@ -136,7 +136,7 @@ input {
 
 .Delete_Comment {
     width: 25%;
-    height: 10%;
+    border: 1px solid white;
 }
 
 .List_Container {

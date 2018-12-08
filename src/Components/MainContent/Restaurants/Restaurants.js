@@ -22,9 +22,9 @@ class Restaurants extends Component {
         });
     }
 
-    addFavorite() {
-        axios.post('http://localhost:3002/api/grabsumgrub/restaurants').then ( response => {
-            console.log(results)
+    addFavorite(element) {
+        axios.post('http://localhost:3002/api/grabsumgrub/restaurants', element).then ( response => {
+            // console.log(results)
             this.setState( { favorites: response.data } )
         })
     }
