@@ -15,11 +15,18 @@ class Restaurants extends Component {
 
     };
 
-    componentDidMount(){
-        axios.get('http://localhost:3002/api/grabsumgrub/restaurants').then( results => {
-        console.log(results)    
-        this.setState( { restaurants:results.data } )
+    componentDidMount() {
+        axios.get('http://localhost:3002/api/grabsumgrub/restaurants').then ( response => {
+        // console.log(results)    
+        this.setState( { restaurants: response.data } )
         });
+    }
+
+    addFavorite() {
+        axios.post('http://localhost:3002/api/grabsumgrub/restaurants').then ( response => {
+            console.log(results)
+            this.setState( { favorites: response.data } )
+        })
     }
     
     render(){
