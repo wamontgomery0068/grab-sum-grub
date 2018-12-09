@@ -18,7 +18,6 @@ app.get( '/api/grabsumgrub/restaurants', rc.getRestaurant);
 // ***** Post Request with Associated Endpoint *****
 
 app.post( '/api/grabsumgrub/restaurants', rc.addRestaurant);
-// uncomment above
 
 // ----- Note -----
 // For the put and delete endpoints, we need to add on a url parameter of id.
@@ -29,8 +28,8 @@ app.post( '/api/grabsumgrub/restaurants', rc.addRestaurant);
 
 // ***** Delete Request with Associated Endpoint *****
 
-// app.delete( '/api/grabsumgrub/deleteRestaurant:id', rc)
-// uncomment above
+app.delete( '/api/grabsumgrub/deleteRestaurant:id', rc.deleteRestaurant);
+
 
 // ***** Put Request with Associated Endpoint *****
 
@@ -39,5 +38,5 @@ app.post( '/api/grabsumgrub/restaurants', rc.addRestaurant);
 
 
 
-app.listen(port, () => {console.log(`It's Magic!; ${port}`)
+app.listen(port, () => {console.log(`Cowabunga!; ${port}`)
 });

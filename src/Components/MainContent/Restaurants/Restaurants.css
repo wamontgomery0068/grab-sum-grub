@@ -21,6 +21,46 @@
     width: 9vw;
 }
 
+.FavoriteList_Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color:hsl(26, 28%, 32%); 
+    border: 2px solid black;
+    border-radius: 12px;
+    height: 60vh;
+    width: 20vw;
+}
+
+.List_Card {
+    display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+    align-items: center;
+    
+    background-color: hsl(40, 2%, 66%);
+    /* background-color: white; */
+    border: 2px solid white;
+    border-radius: 12px;
+    height: 50vh;
+    width: 16vw;
+}
+
+.List_Button {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+    align-items: center;
+
+    background-color: hsl(40, 2%, 66%);
+    border: 2px solid white;
+    border-radius: 12px;
+    height: 6vh;
+    width: 16vw;
+}
+
 .Restaurant_Card {
     display: flex;
 	flex-direction: column;
@@ -31,7 +71,7 @@
     /* background-color: white; */
     border: 2px solid white;
     border-radius: 12px;
-    height: 21vh;
+    height: 24vh;
     width: 8vw;
 }
 
@@ -118,7 +158,7 @@ input {
     /* border: 4px solid yellowgreen; */
     border: 2px solid white;
     border-radius: 12px;
-    height: 3vh;
+    height: 4vh;
     width: 6vw;
     color: white;
     margin: 5%;
@@ -129,7 +169,7 @@ input {
     /* border: 4px solid yellowgreen; */
     border: 2px solid white;
     border-radius: 12px;
-    height: 3vh;
+    height: 4vh;
     width: 6vw;
     color: white;
     margin: 5%;
