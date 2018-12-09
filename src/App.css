@@ -8,6 +8,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   border: 4px solid black;
-  height: 100vh;
+  /* height: 100vh; */
+  height: 120vh;
   width: auto
 }
