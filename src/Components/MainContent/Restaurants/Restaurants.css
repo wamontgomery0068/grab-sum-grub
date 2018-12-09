@@ -48,6 +48,21 @@
     width: 16vw;
 }
 
+.List_Image {
+    height: 20vh;
+    border-radius: 12px;
+    border: 2px solid black;
+}
+
+
+.List_Text {
+    font-size: 8px;
+}
+
+.UserSection_Text {
+    margin-bottom: 1%;
+}
+
 .List_Button {
     display: flex;
 	flex-direction: row;

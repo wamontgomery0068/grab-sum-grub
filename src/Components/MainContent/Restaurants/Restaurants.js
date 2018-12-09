@@ -18,15 +18,19 @@ class Restaurants extends Component {
 
     };
 
+    // Works
+
     componentDidMount() {
         axios.get('http://localhost:3002/api/grabsumgrub/restaurants').then ( response => {
-        // console.log(response)    
-        this.setState( { restaurants: response.data.restaurants } )
+        console.log(response)    
+        this.setState( { restaurants: response.data } )
         });
     };
 
-    addRestaurant(element) {
-        axios.post('http://localhost:3002/api/grabsumgrub/restaurants', element).then ( response => {
+    // Works
+
+    addRestaurant(id) {
+        axios.post('http://localhost:3002/api/grabsumgrub/restaurants', id).then ( response => {
             // console.log(response)
             this.setState( { favorites: response.data } )
         });
@@ -43,7 +47,7 @@ class Restaurants extends Component {
 
         console.log( this.state.restaurants)
 
-        let DisplayRestaurant = this.state.restaurants.map ( (element, index) => {
+        let DisplayRestaurant = this.state.restaurants.map( (element, index) => {
             return (
                 <div key = {index.id}>
                     <div className = "Restaurant_Container">
@@ -68,18 +72,25 @@ class Restaurants extends Component {
             )
         })
 
-        let DisplayFavorite = this.state.restaurants.map ( (element, index) => {
+        let DisplayFavorite = this.state.favorites.map ( (element, index) => {
             return (
                 <div key = {index.id}>
                     <div className = "FavoriteList_Container">
                         <div className = "List_Card">
                             <div className = "Name_Restaurant">
-                                <h3> {element.name } </h3>
+                                <h3> { element.name} </h3>
                             </div>
                             <img className = "List_Image" src={element.image_url}  alt={element.name}/>
+                            <div className = "List_Details">
+                                <p className = "List_Text"> Address: {element.address} </p>
+                                <p className = "List_Text"> City: {element.city} </p>
+                                <p className = "List_Text"> State: {element.state} </p>
+                                <p className = "List_Text"> Area Code: {element.postal_code} </p>
+                                <p className = "List_Text"> Phone Number: {element.phone} </p>
+                                <p className = "List_Text"> Customer Review: {element.review} </p>
+                            </div>
                             <div className = "UserSection_Text">
-                                <p> Restaurant Review </p>
-                                <input type = "text" placeholder= "Add Comment"></input>
+                                <input type = "text" placeholder= "Add a Review"></input>
                                 <button className = "Delete_Comment"> Delete </button>
                             </div>
                         </div>
@@ -99,7 +110,8 @@ class Restaurants extends Component {
                 </div>
                 <div className = "List_Container">
                     <div className = "FavoriteList_Container">
-                        <div className = "List_Card">
+                    { DisplayFavorite }
+                        {/* <div className = "List_Card">
                             <div className = "Name_Restaurant">
                                 <h3> FivePoints Pizza </h3>
                                 <div className = "UserSection_Text">
@@ -113,7 +125,7 @@ class Restaurants extends Component {
                         <div className = "List_Button">
                             <button className = "Update_Button"> Update </button>
                             <button className = "Delete_Button"> Delete </button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>           

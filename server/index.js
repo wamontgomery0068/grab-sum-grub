@@ -33,8 +33,8 @@ app.delete( '/api/grabsumgrub/deleteRestaurant:id', rc.deleteRestaurant);
 
 // ***** Put Request with Associated Endpoint *****
 
-// app.put( '/api/grabsumgrub/restaurants', rc)
-// uncomment above
+// app.put( '/api/grabsumgrub/restaurants/:id', rc.updateReview);
+
 
 
 

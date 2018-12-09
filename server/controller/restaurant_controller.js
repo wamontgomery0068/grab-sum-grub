@@ -5,14 +5,7 @@ const axios = require('axios');
 
 let restaurantData = [];
 let favorites = [];
-
-// const getRestaurant = ( req, res ) => {
-//     axios.get("http://opentable.herokuapp.com/api/restaurants?city=Nashville&per_page=10")
-//     .then( results => {
-//         restaurantData = results.data.restaurants
-//         res.status(200).send(restaurantData)    
-//     }).catch(error => res.status(500).send(error))
-// }
+// let review = "";
 
 const getRestaurant = ( req, res, next ) => {
     axios.get("http://opentable.herokuapp.com/api/restaurants?city=Nashville&per_page=10")
@@ -42,6 +35,12 @@ const deleteRestaurant = ( req, res ) => {
     res.status(200).json(favorites);
 };
 
+// const updateReview = ( req, res, next ) => {
+//     review = req.body.newInput;
+//     res.status(200).send(title);
+//     // console.log(req.body);
+// };
+
 // ----- Note -----
 // module.exports is the Node way of exporting code to be used in another file.
 // In this case, it is an object whose values are all functions.
@@ -50,6 +49,7 @@ module.exports = {
     getRestaurant,
     addRestaurant,
     deleteRestaurant,
+    // updateReview,
 };
 
 // Notes
