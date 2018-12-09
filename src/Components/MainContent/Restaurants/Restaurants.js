@@ -14,6 +14,7 @@ class Restaurants extends Component {
         };
 
         this.addRestaurant = this.addRestaurant.bind(this);
+        this.deleteRestaurant = this.deleteRestaurant.bind(this);
 
     };
 
@@ -22,21 +23,21 @@ class Restaurants extends Component {
         // console.log(response)    
         this.setState( { restaurants: response.data.restaurants } )
         });
-    }
+    };
 
     addRestaurant(element) {
         axios.post('http://localhost:3002/api/grabsumgrub/restaurants', element).then ( response => {
             // console.log(response)
             this.setState( { favorites: response.data } )
-        })
-    }
+        });
+    };
 
-    deleteRestaurant(index) {
-        axios.delete(`http://localhost:3002/api/grabsumgrub/deleteRestaurant/${index}`).then(response => {
+    deleteRestaurant(id) {
+        axios.delete(`http://localhost:3002/api/grabsumgrub/deleteRestaurant/${id}`).then ( response => {
             // console.log(response)
             this.setState( { favorites: response.data } )
-        })
-    }
+        });
+    };
 
     render(){
 
@@ -59,7 +60,7 @@ class Restaurants extends Component {
                         </div>
                         <div className = "Button_Card">
                             <div className = "BeenHere_Button">
-                                <button className = "Add_Button" onClick ={this.addRestaurant}> Add </button>
+                                <button className = "Add_Button" onClick={ () => this.addRestaurant(element)}> Add </button>
                             </div>
                         </div>
                     </div>
@@ -71,10 +72,20 @@ class Restaurants extends Component {
             return (
                 <div key = {index.id}>
                     <div className = "FavoriteList_Container">
-                        <div className = "List_Card"></div>
+                        <div className = "List_Card">
+                            <div className = "Name_Restaurant">
+                                <h3> {element.name } </h3>
+                            </div>
+                            <img className = "List_Image" src={element.image_url}  alt={element.name}/>
+                            <div className = "UserSection_Text">
+                                <p> Restaurant Review </p>
+                                <input type = "text" placeholder= "Add Comment"></input>
+                                <button className = "Delete_Comment"> Delete </button>
+                            </div>
+                        </div>
                         <div className = "List_Button">
                             <button className = "Update_Button"> Update </button>
-                            <button className = "Delete_Button"> Delete </button>                            
+                            <button className = "Delete_Button" onClick={ () => this.deleteRestaurant(index.id)}> Delete </button>                            
                         </div>
                     </div>
                 </div>
@@ -88,7 +99,17 @@ class Restaurants extends Component {
                 </div>
                 <div className = "List_Container">
                     <div className = "FavoriteList_Container">
-                        <div className = "List_Card"></div>
+                        <div className = "List_Card">
+                            <div className = "Name_Restaurant">
+                                <h3> FivePoints Pizza </h3>
+                                <div className = "UserSection_Text">
+                                    <p> Restaurant Review </p>
+                                    <input type = "Text_Button" placeholder= "Add Comment"></input>
+                                    <button className = "Delete_Comment"> Delete </button>
+                                </div>
+                            </div>
+
+                        </div>
                         <div className = "List_Button">
                             <button className = "Update_Button"> Update </button>
                             <button className = "Delete_Button"> Delete </button>

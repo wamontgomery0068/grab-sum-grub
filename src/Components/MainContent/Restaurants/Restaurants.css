@@ -61,6 +61,11 @@
     width: 16vw;
 }
 
+h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 20px;
+    letter-spacing: 2px; 
+}
 .Restaurant_Card {
     display: flex;
 	flex-direction: column;
@@ -119,21 +124,11 @@
     width: 8vw;
 }
 
-
-
-.Text_Button {
-    text-align: center;
-    margin: 1%;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 20px;
-    color: white;
-}
-
-.Section_Text {
+.UserSection_Text {
     font-family: 'Bangers', cursive;
-    font-size: 20px;
+    font-size: 15px;
     color: black;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-align: center;
 }
 
@@ -186,7 +181,7 @@ input {
     justify-content: center;
     align-items: center;
     margin-top: 1%;
-
+    
     background-image: url('https://i.etsystatic.com/6356034/r/il/3372a4/1077724581/il_570xN.1077724581_rvw5.jpg');
     /* background-color: hsl(54, 100%, 77%); */
     /* border: 4px solid gold; */
@@ -203,7 +198,7 @@ input {
     align-items: center;
     align-content: center;
     margin-top: 1%;
-
+    
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3My5uuOWsGcQwa3mFHaTE4_Qx11C3zxv4TB0BndUfbwdPif-S');
     /* background-color: hsl(54, 100%, 77%); */
     /* border: 4px solid gold; */
@@ -218,4 +213,12 @@ input {
     height: 20vh;
     width: 10vw;
     margin: 1%;
+}
+
+.Text_Button {
+    text-align: center;
+    margin: 1%;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    color: white;
 }
