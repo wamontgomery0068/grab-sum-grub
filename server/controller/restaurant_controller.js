@@ -5,8 +5,9 @@ const axios = require('axios');
 
 let restaurantData = [];
 let favorites = [];
-// let review = "";
 
+
+// ******** Full CRUD ********
 
 // ***** Functioning Properly *****
 
@@ -46,6 +47,35 @@ const deleteRestaurant = (req, res) => {
     res.status(200).json(favorites);
 };
 
+
+// ***** Functioning Properly *****
+
+const updateReview = (req, res, next) => {
+    // console.log(req.params.id, req.body.review)
+    const { review } = req.body;
+    const editID = req.params.id;
+    const editIndex = favorites.findIndex(eat => eat.id == editID);
+    let shop = favorites[editIndex];
+    favorites[editIndex] = {
+        name: shop.name,
+        image_url: shop.image_url,
+        address: shop.address,
+        city: shop.city,
+        state: shop.state,
+        postal_code: shop.postal_code,
+        phone: shop.phone,
+        review: review || shop.review,
+    };
+    return res.status(200).json(favorites);
+};
+
+// const updateReview = (req, res) => {
+//     // console.log(req.body);
+//     favorites.forEach(eat.id == req.params.id && Object.assign(eat,req.body))
+//     console.log(favorites)
+//     return res.status(200).json(favorites);
+// };
+
 // ----- Note -----
 // module.exports is the Node way of exporting code to be used in another file.
 // In this case, it is an object whose values are all functions.
@@ -54,7 +84,5 @@ module.exports = {
     getRestaurant,
     addRestaurant,
     deleteRestaurant,
-    // updateReview,
+    updateReview,
 };
-
-// Notes

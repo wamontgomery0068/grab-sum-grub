@@ -26,7 +26,7 @@ app.delete('/api/grabsumgrub/restaurants/:id', rc.deleteRestaurant);
 
 // ***** Put Request with Associated Endpoint *****
 
-// app.put( '/api/grabsumgrub/restaurants/:id', rc.updateReview);
+app.put( '/api/grabsumgrub/restaurants/:id', rc.updateReview);
 
 
 app.listen(port, () => {console.log(`Cowabunga!; ${port}`)

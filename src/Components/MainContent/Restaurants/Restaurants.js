@@ -10,10 +10,12 @@ class Restaurants extends Component {
         this.state = {
             restaurants: [],
             favorites: [],
+            userInput: '',
         };
 
         this.addRestaurant = this.addRestaurant.bind(this);
         this.removeRestaurant = this.removeRestaurant.bind(this);
+        this.updateReview = this.updateReview.bind(this);
 
     };
 
@@ -36,14 +38,27 @@ class Restaurants extends Component {
         });
     };
 
+    // Works
+
     removeRestaurant(id) {
-        console.log(id)
+        // console.log(id)
         axios.delete(`http://localhost:3002/api/grabsumgrub/restaurants/${id}`).then ( response => {
             // console.log(response)
             this.setState( { favorites: response.data } )
         });
     };
 
+    // ***** User Review Section *****
+
+    updateReview(id,review) {
+        // console.log(id)
+        axios.put(`http://localhost:3002/api/grabsumgrub/restaurants/${id}`, {review}).then ( response => {
+            this.setState( { favorites: response.data, userInput: ""} );
+        })
+    };
+
+    
+    
     render(){
 
         let DisplayRestaurant = this.state.restaurants.map( (element, index) => {
@@ -89,13 +104,22 @@ class Restaurants extends Component {
                                 <p className = "List_Text"> Customer Review: {element.review} </p>
                             </div>
                             <div className = "UserSection_Text">
-                                <input type = "text" placeholder= "Add a Review"></input>
-                                <button className = "Delete_Comment"> Delete </button>
+                                <input 
+                                    type = "text" 
+                                    placeholder= "Add a Review" 
+                                    onChange={e => this.setState({ userInput: e.target.value })}/>
+                                <button 
+                                    className = "Delete_Comment"
+                                    > Delete </button>
                             </div>
                         </div>
                         <div className = "List_Button">
-                            <button className = "Update_Button"> Update </button>
-                            <button className = "Delete_Button" onClick={ () => this.removeRestaurant(element.id)}> Delete </button>                            
+                            <button 
+                                className = "Update_Button" 
+                                onClick={() => this.updateReview(element.id, this.state.userInput)}> Update </button>
+                            <button 
+                                className = "Delete_Button" 
+                                onClick={ () => this.removeRestaurant(element.id)}> Delete </button>                            
                         </div>
                     </div>
                 </div>
