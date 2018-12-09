@@ -19,16 +19,9 @@ app.get( '/api/grabsumgrub/restaurants', rc.getRestaurant);
 
 app.post( '/api/grabsumgrub/restaurants', rc.addRestaurant);
 
-// ----- Note -----
-// For the put and delete endpoints, we need to add on a url parameter of id.
-// A url paramter can be defined by adding :variableName when making the URL for an endpoint.
-
-// ----- Note -----
-// Look at the difference between put,delete and post,get
-
 // ***** Delete Request with Associated Endpoint *****
 
-app.delete( '/api/grabsumgrub/deleteRestaurant:id', rc.deleteRestaurant);
+app.delete('/api/grabsumgrub/restaurants/:id', rc.deleteRestaurant);
 
 
 // ***** Put Request with Associated Endpoint *****
@@ -36,7 +29,11 @@ app.delete( '/api/grabsumgrub/deleteRestaurant:id', rc.deleteRestaurant);
 // app.put( '/api/grabsumgrub/restaurants/:id', rc.updateReview);
 
 
-
-
 app.listen(port, () => {console.log(`Cowabunga!; ${port}`)
 });
+
+
+// ----- Notes -----
+// For the put and delete endpoints, we need to add on a url parameter of id.
+// A url paramter can be defined by adding :variableName when making the URL for an endpoint.
+// Look at the difference between put,delete and post,get

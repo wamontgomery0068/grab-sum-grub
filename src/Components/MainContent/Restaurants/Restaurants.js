@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import RestaurantCard from './RestaurantCard/RestaurantCard';
 
 import './Restaurants.css';
 
@@ -14,7 +13,7 @@ class Restaurants extends Component {
         };
 
         this.addRestaurant = this.addRestaurant.bind(this);
-        this.deleteRestaurant = this.deleteRestaurant.bind(this);
+        this.removeRestaurant = this.removeRestaurant.bind(this);
 
     };
 
@@ -22,7 +21,7 @@ class Restaurants extends Component {
 
     componentDidMount() {
         axios.get('http://localhost:3002/api/grabsumgrub/restaurants').then ( response => {
-        console.log(response)    
+        // console.log(response)    
         this.setState( { restaurants: response.data } )
         });
     };
@@ -30,22 +29,22 @@ class Restaurants extends Component {
     // Works
 
     addRestaurant(id) {
+        // console.log(id)
         axios.post('http://localhost:3002/api/grabsumgrub/restaurants', id).then ( response => {
             // console.log(response)
             this.setState( { favorites: response.data } )
         });
     };
 
-    deleteRestaurant(id) {
-        axios.delete(`http://localhost:3002/api/grabsumgrub/deleteRestaurant/${id}`).then ( response => {
+    removeRestaurant(id) {
+        console.log(id)
+        axios.delete(`http://localhost:3002/api/grabsumgrub/restaurants/${id}`).then ( response => {
             // console.log(response)
             this.setState( { favorites: response.data } )
         });
     };
 
     render(){
-
-        console.log( this.state.restaurants)
 
         let DisplayRestaurant = this.state.restaurants.map( (element, index) => {
             return (
@@ -96,7 +95,7 @@ class Restaurants extends Component {
                         </div>
                         <div className = "List_Button">
                             <button className = "Update_Button"> Update </button>
-                            <button className = "Delete_Button" onClick={ () => this.deleteRestaurant(index.id)}> Delete </button>                            
+                            <button className = "Delete_Button" onClick={ () => this.removeRestaurant(element.id)}> Delete </button>                            
                         </div>
                     </div>
                 </div>
@@ -111,21 +110,6 @@ class Restaurants extends Component {
                 <div className = "List_Container">
                     <div className = "FavoriteList_Container">
                     { DisplayFavorite }
-                        {/* <div className = "List_Card">
-                            <div className = "Name_Restaurant">
-                                <h3> FivePoints Pizza </h3>
-                                <div className = "UserSection_Text">
-                                    <p> Restaurant Review </p>
-                                    <input type = "Text_Button" placeholder= "Add Comment"></input>
-                                    <button className = "Delete_Comment"> Delete </button>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div className = "List_Button">
-                            <button className = "Update_Button"> Update </button>
-                            <button className = "Delete_Button"> Delete </button>
-                        </div> */}
                     </div>
                 </div>
             </div>           

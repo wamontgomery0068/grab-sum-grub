@@ -7,13 +7,16 @@ let restaurantData = [];
 let favorites = [];
 // let review = "";
 
+
+// ***** Functioning Properly *****
+
 const getRestaurant = ( req, res, next ) => {
     axios.get("http://opentable.herokuapp.com/api/restaurants?city=Nashville&per_page=10")
     .then( response => {
         restaurantData = response.data.restaurants.map( element => {
             if (element.city === "Nashville") {
                 element.review =
-                    "user comments here"
+                    "enter comment"
             };
             return element;
         });
@@ -22,24 +25,26 @@ const getRestaurant = ( req, res, next ) => {
 };
 
 
+// ***** Functioning Properly *****
+
+
 const addRestaurant = (req, res) => {
-    console.log(res)
+    // console.log(res)
     favorites.push(req.body);
     res.status(200).send(favorites);
 };
 
-const deleteRestaurant = ( req, res ) => {
-    let deleteID = req.params.id;
-    const restaurantIndex = favorites.findIndex(rest => rest.id === +deleteID);
-    favorites.splice(restaurantIndex,1);
+
+// ***** Functioning Properly *****
+
+
+const deleteRestaurant = (req, res) => {
+    // console.log(req.params.id)
+    deleteId = req.params.id;
+    let index = favorites.findIndex( eat => eat.id == deleteId);
+    favorites.splice(index, 1);
     res.status(200).json(favorites);
 };
-
-// const updateReview = ( req, res, next ) => {
-//     review = req.body.newInput;
-//     res.status(200).send(title);
-//     // console.log(req.body);
-// };
 
 // ----- Note -----
 // module.exports is the Node way of exporting code to be used in another file.
