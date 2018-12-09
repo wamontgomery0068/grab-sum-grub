@@ -6,15 +6,31 @@ const axios = require('axios');
 let restaurantData = [];
 let favorites = [];
 
+// const getRestaurant = ( req, res ) => {
+//     axios.get("http://opentable.herokuapp.com/api/restaurants?city=Nashville&per_page=10")
+//     .then( results => {
+//         restaurantData = results.data.restaurants
+//         res.status(200).send(restaurantData)    
+//     }).catch(error => res.status(500).send(error))
+// }
+
 const getRestaurant = ( req, res, next ) => {
     axios.get("http://opentable.herokuapp.com/api/restaurants?city=Nashville&per_page=10")
-    .then( results => {
-        restaurantData = results.data
+    .then( response => {
+        restaurantData = response.data.restaurants.map( element => {
+            if (element.city === "Nashville") {
+                element.review =
+                    "user comments here"
+            };
+            return element;
+        });
         res.status(200).send(restaurantData)
-    }).catch(error => res.status(500).send(error))
-}
+    }).catch(err => res.status(500).send(err))
+};
 
-const addRestaurant = (req, res, next) => {
+
+const addRestaurant = (req, res) => {
+    console.log(res)
     favorites.push(req.body);
     res.status(200).send(favorites);
 };
