@@ -109,7 +109,11 @@
     box-shadow: 5px 5px 5px 5px black;
     height: 70vh;
     width: 30vw;
-    /* overflow: auto; */
+    overflow: auto;
+}
+
+.FavoriteList_Container {
+    height: 80%
 }
 
 .List_Favorite_Card {
