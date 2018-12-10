@@ -119,10 +119,10 @@ class Restaurants extends Component {
                         <div className = "List_Button_Card">
                             <button 
                                 className = "List_Update_Button" 
-                                onClick={() => this.updateReview(element.id, this.state.userInput)}> Update </button>
+                                onClick={() => this.updateReview(element.id, this.state.userInput)}></button>
                             <button 
                                 className = "List_Delete_Button" 
-                                onClick={ () => this.removeRestaurant(element.id)}> Delete </button>                            
+                                onClick={ () => this.removeRestaurant(element.id)}></button>                            
                         </div>
                     </div>
                 </div>
