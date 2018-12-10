@@ -81,7 +81,7 @@ class Restaurants extends Component {
                         </div>
                         <div className = "Restaurant_Button_Card">
                             <div className = "BeenHere_Button">
-                                <button className = "Add_Button" onClick={ () => this.addRestaurant(element)}> Add </button>
+                                <button className = "Add_Button" onClick={ () => this.addRestaurant(element)}>Add</button>
                             </div>
                         </div>
                     </div>
