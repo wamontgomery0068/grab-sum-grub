@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+// import Favorites from '../Favorites/Favorites';
 
 import './Restaurants.css';
+
 
 class Restaurants extends Component {
     constructor() {
@@ -60,23 +62,24 @@ class Restaurants extends Component {
     
     
     render(){
+        // console.log(this.state.favorites)
 
         let DisplayRestaurant = this.state.restaurants.map( (element, index) => {
             return (
                 <div key = {index.id}>
                     <div className = "Restaurant_Container">
                         <div className = "Restaurant_Card">
-                            <div className = "Name_Restaurant">
+                            <div className = "Restaurant_Name">
                                 <p> {element.name} </p>
                             </div>
-                            <img className = "Image_Restaurant" src={element.image_url}  alt={element.name}/>
-                            <div className = "Details_Restaurant">
-                                <p className = "Text_Details"> {element.address} </p>
-                                <p className = "Text_Details"> {element.city} </p>
-                                <p className = "Text_Details"> {element.state} </p>
+                            <img className = "Restaurant_Image" src={element.image_url}  alt={element.name}/>
+                            <div className = "Restaurant_Details">
+                                <p className = "Restaurant_Text"> {element.address} </p>
+                                <p className = "Restaurant_Text"> {element.city} </p>
+                                <p className = "Restaurant_Text"> {element.state} </p>
                             </div>
                         </div>
-                        <div className = "Button_Card">
+                        <div className = "Restaurant_Button_Card">
                             <div className = "BeenHere_Button">
                                 <button className = "Add_Button" onClick={ () => this.addRestaurant(element)}> Add </button>
                             </div>
@@ -89,9 +92,9 @@ class Restaurants extends Component {
         let DisplayFavorite = this.state.favorites.map ( (element, index) => {
             return (
                 <div key = {index.id}>
-                    <div className = "FavoriteList_Container">
+                    <div className = "List_Favorite_Card">
                         <div className = "List_Card">
-                            <div className = "Name_Restaurant">
+                            <div className = "Restaurant_Name">
                                 <h3> { element.name} </h3>
                             </div>
                             <img className = "List_Image" src={element.image_url}  alt={element.name}/>
@@ -103,22 +106,22 @@ class Restaurants extends Component {
                                 <p className = "List_Text"> Phone Number: {element.phone} </p>
                                 <p className = "List_Text"> Customer Review: {element.review} </p>
                             </div>
-                            <div className = "UserSection_Text">
+                            <div className = "List_UserSection_Text">
                                 <input 
                                     type = "text" 
                                     placeholder= "Add a Review" 
                                     onChange={e => this.setState({ userInput: e.target.value })}/>
                                 <button 
-                                    className = "Delete_Comment"
+                                    className = "List_Delete_Comment"
                                     > Delete </button>
                             </div>
                         </div>
-                        <div className = "List_Button">
+                        <div className = "List_Button_Card">
                             <button 
-                                className = "Update_Button" 
+                                className = "List_Update_Button" 
                                 onClick={() => this.updateReview(element.id, this.state.userInput)}> Update </button>
                             <button 
-                                className = "Delete_Button" 
+                                className = "List_Delete_Button" 
                                 onClick={ () => this.removeRestaurant(element.id)}> Delete </button>                            
                         </div>
                     </div>
@@ -128,12 +131,24 @@ class Restaurants extends Component {
 
         return(
             <div className = "Restaurants">
-                <div className = "RestaurantList_Container">
+                <div className = "Restaurant_List_Container">
                     {DisplayRestaurant}
                 </div>
                 <div className = "List_Container">
                     <div className = "FavoriteList_Container">
-                    { DisplayFavorite }
+                        { DisplayFavorite }
+                        {/* <Favorites 
+                            name={this.state.favorites.name}
+                            image={this.state.favorites.image_url}
+                            address={this.state.favorites.address}
+                            city={this.state.favorites.city}
+                            state={this.state.favorites.state}
+                            code={this.state.favorites.postal_code}
+                            phone={this.state.favorites.phone}
+                            review={this.state.favorites.review}
+                            update={this.updateReview}
+                            delete={this.removeRestaurant}
+                        /> */}
                     </div>
                 </div>
             </div>           

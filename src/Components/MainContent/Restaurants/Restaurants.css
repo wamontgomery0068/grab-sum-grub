@@ -5,6 +5,23 @@
     align-items: center;
 }
 
+.Restaurant_List_Container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 1%;
+    
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3My5uuOWsGcQwa3mFHaTE4_Qx11C3zxv4TB0BndUfbwdPif-S');
+    /* background-color: hsl(54, 100%, 77%); */
+    /* border: 4px solid gold; */
+    box-shadow: 5px 5px 5px 5px black;
+    height: 70vh;
+    width: 50vw;
+}
+
 .Restaurant_Container {
     display: flex;
     flex-direction: column;
@@ -21,7 +38,81 @@
     width: 9vw;
 }
 
-.FavoriteList_Container {
+.Restaurant_Card {
+    display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+    align-items: center;
+    
+    background-color: hsl(40, 2%, 66%);
+    /* background-color: white; */
+    border: 2px solid white;
+    border-radius: 12px;
+    height: 24vh;
+    width: 8vw;
+}
+
+.Restaurant_Name {
+    /* background-color: lightgray; */
+    /* border: 2px solid black; */
+    height: 5vh;
+    text-align: center;
+
+    font-family: 'Bangers', cursive;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.Restaurant_Image {
+    height: 10vh;
+    border-radius: 12px;
+    border: 2px solid black;
+}
+
+.Restaurant_Details {
+    /* background-color: lightgray; */
+    /* border: 2px solid black; */
+    align-items: flex-start;
+    height: 6vh;
+    width: 10vw;
+    margin-left: 70px;
+    line-height: 20%;
+}
+
+.Restaurant_Text {
+    font-size: 8px;
+}
+
+.Restaurant_Button_Card {
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+    align-items: center;
+
+    background-color: hsl(40, 2%, 66%);
+    border: 2px solid white;
+    border-radius: 12px;
+    height: 4vh;
+    width: 8vw;
+}
+
+.List_Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+    
+    background-image: url('https://i.etsystatic.com/6356034/r/il/3372a4/1077724581/il_570xN.1077724581_rvw5.jpg');
+    /* background-color: hsl(54, 100%, 77%); */
+    /* border: 4px solid gold; */
+    box-shadow: 5px 5px 5px 5px black;
+    height: 70vh;
+    width: 30vw;
+    /* overflow: auto; */
+}
+
+.List_Favorite_Card {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -54,16 +145,15 @@
     border: 2px solid black;
 }
 
-
 .List_Text {
     font-size: 8px;
 }
 
-.UserSection_Text {
+.List_UserSection_Text {
     margin-bottom: 1%;
 }
 
-.List_Button {
+.List_Button_Card {
     display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -76,67 +166,37 @@
     width: 16vw;
 }
 
+.List_Update_Button {
+    background-color: hsl(26, 28%, 32%);
+    /* border: 4px solid yellowgreen; */
+    border: 2px solid white;
+    border-radius: 12px;
+    height: 4vh;
+    width: 6vw;
+    color: white;
+    margin: 5%;
+}
+
+.List_Delete_Button {
+    background-color: hsl(26, 28%, 32%);
+    /* border: 4px solid yellowgreen; */
+    border: 2px solid white;
+    border-radius: 12px;
+    height: 4vh;
+    width: 6vw;
+    color: white;
+    margin: 5%;
+}
+
+.List_Delete_Comment {
+    width: 25%;
+    border: 1px solid white;
+}
+
 h3 {
     font-family: 'Bangers', cursive;
     font-size: 20px;
     letter-spacing: 2px; 
-}
-.Restaurant_Card {
-    display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-    align-items: center;
-    
-    background-color: hsl(40, 2%, 66%);
-    /* background-color: white; */
-    border: 2px solid white;
-    border-radius: 12px;
-    height: 24vh;
-    width: 8vw;
-}
-
-.Name_Restaurant {
-    /* background-color: lightgray; */
-    /* border: 2px solid black; */
-    height: 5vh;
-    text-align: center;
-
-    font-family: 'Bangers', cursive;
-    font-size: 12px;
-    letter-spacing: 1px;
-}
-
-.Image_Restaurant {
-    height: 10vh;
-    border-radius: 12px;
-    border: 2px solid black;
-}
-
-.Details_Restaurant {
-    /* background-color: lightgray; */
-    /* border: 2px solid black; */
-    align-items: flex-start;
-    height: 6vh;
-    width: 10vw;
-    margin-left: 70px;
-    line-height: 20%;
-}
-
-.Text_Details {
-    font-size: 8px;
-}
-
-.Button_Card {
-    display: flex;
-	flex-direction: row;
-	justify-content: center;
-    align-items: center;
-
-    background-color: hsl(40, 2%, 66%);
-    border: 2px solid white;
-    border-radius: 12px;
-    height: 4vh;
-    width: 8vw;
 }
 
 .UserSection_Text {
@@ -161,65 +221,6 @@ h3 {
 input {
     width: 70%;
     text-align: center;
-}
-
-.Update_Button {
-    background-color: hsl(26, 28%, 32%);
-    /* border: 4px solid yellowgreen; */
-    border: 2px solid white;
-    border-radius: 12px;
-    height: 4vh;
-    width: 6vw;
-    color: white;
-    margin: 5%;
-}
-
-.Delete_Button {
-    background-color: hsl(26, 28%, 32%);
-    /* border: 4px solid yellowgreen; */
-    border: 2px solid white;
-    border-radius: 12px;
-    height: 4vh;
-    width: 6vw;
-    color: white;
-    margin: 5%;
-}
-
-.Delete_Comment {
-    width: 25%;
-    border: 1px solid white;
-}
-
-.List_Container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1%;
-    
-    background-image: url('https://i.etsystatic.com/6356034/r/il/3372a4/1077724581/il_570xN.1077724581_rvw5.jpg');
-    /* background-color: hsl(54, 100%, 77%); */
-    /* border: 4px solid gold; */
-    box-shadow: 5px 5px 5px 5px black;
-    height: 70vh;
-    width: 30vw;
-}
-
-.RestaurantList_Container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    margin-top: 1%;
-    
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3My5uuOWsGcQwa3mFHaTE4_Qx11C3zxv4TB0BndUfbwdPif-S');
-    /* background-color: hsl(54, 100%, 77%); */
-    /* border: 4px solid gold; */
-    box-shadow: 5px 5px 5px 5px black;
-    height: 70vh;
-    width: 50vw;
 }
 
 .User_Input {
